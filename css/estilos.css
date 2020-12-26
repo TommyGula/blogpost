@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    border: 1px solid grey;
+    text-align: center;
+}
+
+.container h1 {
+    color: blue;
+}
+
+.container h3 {
+    color: blueviolet;
+}
+
