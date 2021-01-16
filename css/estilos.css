@@ -13,7 +13,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 100px;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 header .logo {
@@ -89,7 +90,8 @@ header li:hover {
 }
 
 .container {
-    padding:0 100px;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 .slider {
@@ -98,7 +100,8 @@ header li:hover {
     overflow: hidden;
     background-color: rgb(0, 0, 0);
     margin: 0;
-    box-shadow: 0px 0px 50px 0px black;
+    box-shadow: 0px 0px 20px 0px black;
+    position: relative;
 }
 
 .slider ul {
@@ -116,7 +119,6 @@ header li:hover {
     overflow: hidden;
     height: 400px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -137,3 +139,76 @@ header li:hover {
     75%{margin-left: -300%;}
     100%{margin-left: -300%;}
 }
+
+.slider .text-box {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    color: white;
+    align-self: flex-start;
+    justify-self: self-start;
+    margin: 50px 50px;
+}
+
+.slider .text-box h2 {
+    margin: 0;
+    font-size: 60px;
+}
+
+.slider .text-box p {
+    margin: 0;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.panel {
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgba(253, 227, 232, 0.76);
+    padding: 30px 20px;
+}
+
+.panel h2 {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.panel-box {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(1, 200px);
+    justify-content: space-evenly;
+}
+
+.post {
+    border: 1px solid red;
+}
+
+.post figure {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.post img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (max-width: 320px) {
+
+}
+
