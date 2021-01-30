@@ -8,6 +8,9 @@
     <link rel="icon" type="image/png" href="images/fondo.png">
 </head>
 <body>
+    <i class="burger-button" id="burger-menu">
+        <img src="icons/list.svg" alt="">
+    </i>
     <header>
         <div class="up">
             <figure class="logoContainer">
@@ -19,7 +22,7 @@
                     <img src="icons/facebook.svg" alt=""></a>
                     <a class="icon instagram" href="https://www.instagram.com/intime.amour/">
                     <img src="icons/instagram.svg" alt=""></a>
-                    <a class="icon gmail" href="mailto:salomonitiara@email.com">
+                    <a class="icon gmail" href="mailto:tiarasalomoni@hotmail.com">
                         <img src="icons/gmail.svg" alt="">
                     </a>
                     <a class="icon whatsapp" href="https://api.whatsapp.com/send?phone=541163022418">
@@ -44,46 +47,99 @@
         <section class="presentation">
             <div class="slider">
                 <ul>
-                    <li><img class="img1" src="backgrouds/img1.jpg" alt=""><div class="text-box"><h2>Texto aqui...</h2><p>Descripción del texto aqui...</p></div></li>
-                    <li><img class="img1" src="backgrouds/img2.jpg" alt=""><div class="text-box"><h2>Texto aqui...</h2><p>Descripción del texto aqui...</p></div></li>
+                    <li><img class="img1" src="backgrouds/img1.jpg" alt=""><div class="text-box"><h2>Amour Lingerie</h2><p>Ten la libertad de usar lo que te haga sentir ÚNICA</p></div></li>
+                    <li><img class="img1" src="backgrouds/img2.jpg" alt=""><div class="text-box"><h2>Todo lo que necesitas está acá</h2><p>Regalos y Gift Cards para TODAS</p></div></li>
                     <li><img class="img1" src="backgrouds/img3.jpg" alt=""><div class="text-box"><h2>Texto aqui...</h2><p>Descripción del texto aqui...</p></div></li>
                     <li><img class="img1" src="backgrouds/img4.jpg" alt=""><div class="text-box"><h2>Texto aqui...</h2><p>Descripción del texto aqui...</p></div></li>
                 </ul>
             </div>
         </section>
         <section class="panel">
-            <h2>¿Qué estás buscando?</h2>
+            <h2>¿Qué estás buscando hoy?</h2>
                 <div class="panel-box">
                     <a href="" class="post">
-                        <figure class="post-image">
-                            <img src="categories/conjuntos/1.PNG" alt="">
-                            <img src="categories/conjuntos/2.PNG" alt="">
-                            <img src="categories/conjuntos/3.PNG" alt="">
-                            <img src="categories/conjuntos/4.PNG" alt="">
-                        </figure>
+                        <ul class="post-image">
+                            <li><img src="categories/conjuntos/1.PNG" alt=""></li>
+                            <li><img src="categories/conjuntos/2.PNG" alt=""></li>
+                            <li><img src="categories/conjuntos/3.PNG" alt=""></li>
+                            <li><img src="categories/conjuntos/4.PNG" alt=""></li>
+                        </ul>
                         <span class="post-overlay">
-                            <h3>CATEGORIA</h3>
+                            <h3>CONJUNTOS</h3>
                         </span>
                     </a>  
                     <a href="" class="post">
-                        <figure class="post-image">
-                            <img src="categories/mallas.PNG" alt="">
-                        </figure>
+                        <ul class="post-image">
+                            <li><img src="categories/mallas/1.PNG" alt=""></li>
+                            <li><img src="categories/mallas/2.PNG" alt=""></li>
+                            <li><img src="categories/mallas/3.PNG" alt=""></li>
+                            <li><img src="categories/mallas/4.PNG" alt=""></li>
+                        </ul>
                         <span class="post-overlay">
-                            <h3>CATEGORIA</h3>
+                            <h3>MALLAS</h3>
                         </span>
                     </a>  
                     <a href="" class="post">
-                        <figure class="post-image">
-                            <img src="categories/vestidos.PNG" alt="">
-                        </figure>
+                        <ul class="post-image">
+                            <li><img src="categories/vestidos/1.PNG" alt=""></li>
+                            <li><img src="categories/vestidos/1.PNG" alt=""></li>
+                            <li><img src="categories/vestidos/1.PNG" alt=""></li>
+                            <li><img src="categories/vestidos/1.PNG" alt=""></li>
+                        </ul>
                         <span class="post-overlay">
-                            <h3>CATEGORIA</h3>
+                            <h3>PIJAMAS</h3>
                         </span>
                     </a>  
                 </div>
         </section>
     </div>
-    
+    <section class="contact">
+        <h2>¿Tenés dudas? ¡Contactame!</h2>
+            <div class="buttons">
+                <button class="footerButton question">Quiero hacer una consulta</button>
+                <button class="footerButton buy">Quiero realizar un pedido</button>
+            </div>    
+    </section>
+    <footer>
+        <figure class="footerLogoContainer">
+            <img src="images/fondo.png" alt="">
+        </figure>
+        <nav>
+            <a href="https://www.facebook.com/intimeamour-109019044248483">
+            <img src="icons/facebook.svg" alt=""></a>
+            <a href="https://www.instagram.com/intime.amour/">
+            <img src="icons/instagram.svg" alt=""></a>
+            <a href="mailto:tiarasalomoni@hotmail.com">
+            <img src="icons/gmail.svg" alt="">
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=541163022418">
+            <img src="icons/whatsapp.svg" alt=""></a>
+        </nav>
+        <p>Made with love, Tommy</p>
+    </footer>
+    <script>
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+        const menu = document.querySelector('header nav');
+        const burgerButton = document.querySelector('#burger-menu');
+
+        ipad.addListener(validation);
+
+        function validation(event) {
+            if (event.matches) {
+                burgerButton.addEventListener('click', hideShow)
+            } else {
+                burgerButton.removeEventListener('click', hideShow)
+            }
+        }
+        validation(ipad);
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            } else {
+                menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html>
