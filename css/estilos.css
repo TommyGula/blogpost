@@ -402,7 +402,7 @@ footer p {
 
     .slider {
         box-shadow: none;
-        height: 80vh;
+        height: 70vh;
     }
 
     .slider ul {
@@ -418,11 +418,11 @@ footer p {
     }
 
     .slider .text-box h2 {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .slider .text-box p {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .contact {
@@ -443,7 +443,7 @@ footer p {
 
     footer {
         display: block;
-        height: 60vh;
+        height: 40vh;
         text-align: center;
         padding: 0;
         padding: 30px;
